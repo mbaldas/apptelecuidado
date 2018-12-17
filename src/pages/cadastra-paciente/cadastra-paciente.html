@@ -14,12 +14,44 @@
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-label>Nome:</ion-label>
-    <ion-input [(ngModel)] = "paciente.nome" placeholder="teste"></ion-input>
-  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome:</ion-label>
+      <ion-input [(ngModel)] = "paciente.nome"></ion-input>
+    </ion-item>
 
-  {{paciente | json}}
+    <ion-item>
+      <ion-label floating>Sexo:</ion-label>
+      <ion-select [(ngModel)] = "paciente.sexo">
+        <ion-option value="Masculino">Masculino</ion-option>
+        <ion-option value="Feminino">Feminino</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Data de Nascimento:</ion-label>
+      <ion-input [(ngModel)] = "paciente.dataNascimento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Telefone:</ion-label>
+      <ion-input type="number" [(ngModel)] = "paciente.telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Endereço:</ion-label>
+      <ion-textarea [(ngModel)] = "paciente.endereco" maxlength ="500"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Instituição:</ion-label>
+      <ion-select [(ngModel)] = "paciente.instituicao">
+        <ion-option value="Hospital Adventista Silvestre">Hospital Adventista Silvestre</ion-option>
+        <ion-option value="UNB">UNB</ion-option>
+        <ion-option value="Melhor em Casa – São Gonçalo">Melhor em Casa – São Gonçalo</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 
   <button ion-button block clear (click)="cadastraPaciente(paciente)">Add</button>
 </ion-content>

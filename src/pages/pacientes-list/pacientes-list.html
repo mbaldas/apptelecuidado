@@ -17,7 +17,16 @@
 
   <ion-list>
     <ion-list-header>Pacientes</ion-list-header>
-    <ion-item *ngFor="let paciente of lista | async">{{paciente.nome}}</ion-item>
+    <ion-card *ngFor="let paciente of lista | async">
+      <ion-card-content>
+        <ion-row><p><b>Nome:</b> {{ paciente.nome }}</p></ion-row>
+        <ion-row><p><b>Sexo:</b> {{ paciente.sexo }}</p></ion-row>
+        <ion-row><p><b>Data de Nascimento:</b> {{ paciente.dataNascimento }}</p></ion-row>
+        <ion-row><p><b>Telefone:</b> {{ paciente.telefone }}</p></ion-row>
+        <ion-row><p><b>Endereço:</b> {{ paciente.endereco }}</p></ion-row>
+        <ion-row><p><b>Instituição:</b> {{ paciente.instituicao }}</ion-row>
+      </ion-card-content>
+    </ion-card>
   </ion-list>
 
   <ion-fab bottom right>

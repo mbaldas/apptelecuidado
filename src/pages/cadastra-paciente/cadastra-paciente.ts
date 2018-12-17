@@ -23,7 +23,12 @@ import { PacienteServiceProvider } from '../../providers/paciente-service/pacien
 export class CadastraPacientePage {
 
   paciente: Paciente = {
-    nome: ''
+    nome: '',
+    sexo: '',
+    dataNascimento: '',
+    telefone: undefined,
+    endereco: '',
+    instituicao: ''
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private pacientesList: PacienteServiceProvider) {

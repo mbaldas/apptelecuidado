@@ -28,10 +28,10 @@ export class PacientesListPage {
     console.log(this.lista);
 
     // this.lista = this.pacientesList.getAll().snapshotChanges().map(changes => {      //returs a db list e snapchotchanges retorna a chave e o valor
-    //   return changes.map(p => ({                                 //mapeia os valores em um novo objeto com a key
-    //     key: p.payload.key, ...p.payload.val()
-    //   }));
-    // });
+    //    return changes.map(p => ({                                 //mapeia os valores em um novo objeto com a key
+    //      key: p.payload.key, ...p.payload.val()
+    //    }));
+    //  });
   }
 
   // {
